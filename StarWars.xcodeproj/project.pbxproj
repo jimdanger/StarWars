@@ -132,9 +132,8 @@
 			children = (
 				8B1D70F61F4F21E7009A28BE /* AppDelegate.swift */,
 				8B1D70F81F4F21E7009A28BE /* ViewController.swift */,
-				8BEB05141F4F22DB006B1CBE /* SwApi.swift */,
-				8BEB05181F4F2379006B1CBE /* RestApi.swift */,
-				8BEB05161F4F2323006B1CBE /* Film.swift */,
+				8BEB051A1F4F2E69006B1CBE /* Apis */,
+				8BEB051B1F4F2E6F006B1CBE /* Models */,
 				8B1D70FA1F4F21E7009A28BE /* Main.storyboard */,
 				8B1D70FD1F4F21E7009A28BE /* Assets.xcassets */,
 				8B1D70FF1F4F21E7009A28BE /* LaunchScreen.storyboard */,
@@ -159,6 +158,23 @@
 				8B1D71181F4F21E7009A28BE /* Info.plist */,
 			);
 			path = StarWarsUITests;
+			sourceTree = "<group>";
+		};
+		8BEB051A1F4F2E69006B1CBE /* Apis */ = {
+			isa = PBXGroup;
+			children = (
+				8BEB05141F4F22DB006B1CBE /* SwApi.swift */,
+				8BEB05181F4F2379006B1CBE /* RestApi.swift */,
+			);
+			name = Apis;
+			sourceTree = "<group>";
+		};
+		8BEB051B1F4F2E6F006B1CBE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8BEB05161F4F2323006B1CBE /* Film.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

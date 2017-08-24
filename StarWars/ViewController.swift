@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
+    @IBOutlet weak var openingCrawl: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         loadData()
@@ -21,13 +24,21 @@ class ViewController: UIViewController {
 
     func loadData() {
         let swapi = SwApi()
-        swapi.getEmpireFilm { film in
+//        swapi.getEmpireFilm { film in
+//            self.processFilm(film: film)
+//        }
+
+        swapi.getFilmGeneric { film in
             self.processFilm(film: film)
         }
+
+
     }
 
     func processFilm(film: Film){
-        print(film)
+
+//        title.text = film.title
+        openingCrawl.text = film.opening_crawl
     }
 
 

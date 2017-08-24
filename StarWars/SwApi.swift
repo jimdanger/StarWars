@@ -21,6 +21,16 @@ class SwApi {
         }
     }
 
+    func getFilmGeneric(completion: @escaping (_ film: Film) -> Void) {
+        let url: String = "https://swapi.co/api/films/2/"
+        let restApi = RestApi()
+        restApi.get(url: url) { (film: Film) in
+            completion(film)
+        }
+
+
+    }
+
 }
 
 

@@ -28,7 +28,7 @@ class Film: Mappable {
     required init?(map: Map){
 
     }
-    
+
     func mapping(map: Map) {
         title <- map["title"]
         episode_id <- map["episode_id"]
