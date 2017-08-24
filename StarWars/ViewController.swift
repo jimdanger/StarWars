@@ -12,14 +12,23 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        loadData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+
+    func loadData() {
+        let swapi = SwApi()
+        swapi.getEmpireFilm { film in
+            self.processFilm(film: film)
+        }
+    }
+
+    func processFilm(film: Film){
+        print(film)
     }
 
 
 }
-
