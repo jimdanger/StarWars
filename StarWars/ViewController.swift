@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
 
     var array: [String]? = ["asdf","qwer","xfc","dfgh"]
+    var film: Film?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +48,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func processFilm(film: Film){
 
-
+        self.film = film
         openingCrawl.text = film.opening_crawl
     }
 
@@ -67,19 +68,27 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-
         if let unwrappedArray = array {
             return unwrappedArray.count
         } else {
             return 0
         }
+    }
 
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Constants.SequeIdentifiers.next.rawValue, sender: nil)
     }
 
     
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == Constants.SequeIdentifiers.next.rawValue {
+            if let destinationVC: DetailVC = segue.destination as? DetailVC {
+                destinationVC.film = self.film
+            }
+        }
+
+    }
 
 
 }
