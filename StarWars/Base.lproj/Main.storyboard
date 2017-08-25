@@ -28,17 +28,48 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gwr-Md-gfV">
+                                <rect key="frame" x="0.0" y="210" width="375" height="457"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="swcell" id="3Il-lY-Kg8" customClass="SWTableViewCell" customModule="StarWars" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3Il-lY-Kg8" id="Ymo-Gi-fpB" customClass="SWTableViewCell" customModule="StarWars" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nQr-3y-zCu">
+                                                    <rect key="frame" x="21" y="8" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="swlabel" destination="nQr-3y-zCu" id="bXN-dd-mPy"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="RnN-XF-LK9" secondAttribute="trailing" constant="20" id="PBi-KR-axe"/>
+                            <constraint firstItem="Gwr-Md-gfV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="190" id="Wa1-Mk-Cxw"/>
                             <constraint firstItem="RnN-XF-LK9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="h1x-EP-iNV"/>
                             <constraint firstItem="RnN-XF-LK9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="hqU-ea-mDd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Gwr-Md-gfV" secondAttribute="trailing" constant="-16" id="jgE-rX-sEU"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Gwr-Md-gfV" secondAttribute="bottom" id="jmP-tb-G4B"/>
+                            <constraint firstItem="Gwr-Md-gfV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="nFH-3X-X5J"/>
                             <constraint firstItem="RnN-XF-LK9" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="57" id="sX4-DQ-VxO"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="openingCrawl" destination="RnN-XF-LK9" id="YoS-Av-EYT"/>
+                        <outlet property="tableView" destination="Gwr-Md-gfV" id="0DZ-UY-dMM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
